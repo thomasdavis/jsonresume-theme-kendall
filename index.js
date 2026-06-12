@@ -216,6 +216,17 @@ function render(resumeObject) {
         }
     }
 
+    if (resumeObject.certificates && resumeObject.certificates.length) {
+        if (resumeObject.certificates[0].name) {
+            resumeObject.certificatesBool = true;
+            _.each(resumeObject.certificates, function(c){
+                c.year = (c.date || "").substr(0,4);
+                c.day = (c.date || "").substr(8,2);
+                c.month = getMonth(c.date || "");
+            });
+        }
+    }
+
     if (resumeObject.skills && resumeObject.skills.length) {
         if (resumeObject.skills[0].name) {
             resumeObject.skillsBool = true;

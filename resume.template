@@ -281,6 +281,30 @@
             {{/publications}}
           </div>
           {{/publicationsBool}}
+          {{#certificatesBool}}
+          <!-- CERTIFICATES -->
+          <div class="box">
+            <h2><i class="fas fa-award ico"></i> Certificates</h2>
+            {{#certificates}}
+            <div class="publication panel panel-default">
+              <div class="panel-heading">
+                <div class="name panel-title">{{name}}</div>
+              </div>
+              <div class="panel-body">
+                {{#issuer}}
+                <div class="publisher"><i class= "fas fa-building ico"></i> {{issuer}}</div>
+                {{/issuer}}
+                <div class="year">{{day}} {{month}} {{year}}</div>
+                {{#url}}
+                <div class="address">
+                  <a href="{{url}}" target= "_blank"><i class="fas fa-globe ico"></i> {{url}}</a>
+                </div>
+                {{/url}}
+              </div>
+            </div>
+            {{/certificates}}
+          </div>
+          {{/certificatesBool}}
           {{#languagesBool}}
           <!-- LANGUAGES -->
           <div class="box">
